@@ -1,0 +1,52 @@
+<header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <!-- ***** Logo Start ***** -->
+          <a href="index.html" class="logo">
+            <img src="assets/images/logo.png" alt="">
+          </a>
+          <!-- ***** Logo End ***** -->
+          <!-- ***** Menu Start ***** -->
+          <ul class="nav">
+            <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
+            <li><a routerLinkActive="active" routerLink="/addcov">
+              <i class="fa-solid fa-plus"></i>
+              Publier un trajet</a></li>
+            <li><a routerLinkActive="active" routerLink="/about">Newsletter</a></li>
+            <li *ngIf="deconnexion==false">
+
+              <a routerLinkActive="active" routerLink="/about">Se connecter</a>
+            </li>
+            <li  *ngIf="deconnexion==true" class="nav-item dropdown" >
+
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <div class="circle" [ngStyle]="{'background-color':  circleColor }">
+                  <img   class="avatar" class="user" *ngIf="!showInitials" src="{{photoUrl}}">
+
+                  <div *ngIf="showInitials" class="initials">
+                    {{ initials }}
+                  </div>
+                </div>
+              </a>
+              <div class="dropdown-menu dropdown-menu-end">
+                <a routerLink="/profile" style="color:black ; font-size: 12px;"
+                   class="dropdown-item">Profile</a>
+                <div class="dropdown-divider"></div>
+                <a  class="dropdown-item"
+                    style="color:black; font-size: 12px;">Déconnexion</a>
+              </div>
+            </li>
+
+
+          </ul>
+          <a class='menu-trigger'>
+            <span>Menu</span>
+          </a>
+          <!-- ***** Menu End ***** -->
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
