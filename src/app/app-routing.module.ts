@@ -16,7 +16,7 @@ import {EditCovComponent} from "./edit-cov/edit-cov.component";
 
 const routes: Routes = [
   {path: '', redirectTo: 'login-register', pathMatch: 'full'},
-  { path: 'home', component:HomeComponent, canActivate:[LoginGuard] },
+  { path: 'home', component:HomeComponent},
   { path: 'displayCov/:from/:to/:date', component:DisplaycovComponent },
   { path: 'addcov', component:AddcovComponent },
   { path: 'about', component:AboutComponent },

@@ -4,7 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { PublicationserviceService } from '../publicationservice.service';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import {NgxSpinnerService} from "ngx-spinner";
-
+import { MatDialog } from '@angular/material/dialog';
+import { AboutComponent } from '../about/about.component';
 @Component({
   selector: 'app-displaycov',
   templateUrl: './displaycov.component.html',
@@ -58,7 +59,7 @@ export class DisplaycovComponent implements OnInit {
     { item_id: 7, item_text: 'ariena' },
   ];
 
-  constructor(private route: ActivatedRoute, private router: Router, private api: PublicationserviceService,private spinner:NgxSpinnerService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private api: PublicationserviceService,private spinner:NgxSpinnerService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     window.scrollTo(0,0);
@@ -364,5 +365,7 @@ export class DisplaycovComponent implements OnInit {
   SearchData() {
     this.loaddata();
   }
-
+  open() {
+    let dialogRef = this.dialog.open(AboutComponent);
+  }
 }

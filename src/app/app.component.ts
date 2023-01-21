@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 export class AppComponent implements OnInit{
   title = 'escov';
 
-  constructor(private readonly googleApi:GoogleApiService,private userService:UserService,private router:Router) {
+  constructor(private userService:UserService,private router:Router) {
   }
   ngOnInit(): void {
 

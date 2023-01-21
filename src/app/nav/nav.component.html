@@ -12,30 +12,30 @@
           <ul class="nav">
             <li><a routerLinkActive="active" routerLink="/home">Home</a></li>
             <li><a routerLinkActive="active" routerLink="/addcov">
-              <i class="fa-solid fa-plus"></i>
-              Publier un trajet</a></li>
-            <li><a routerLinkActive="active" routerLink="/about">Newsletter</a></li>
+                <i class="fa-solid fa-plus"></i>
+                Publier un trajet</a></li>
+            
+
             <li *ngIf="deconnexion==false">
 
               <a routerLinkActive="active" routerLink="/about">Se connecter</a>
             </li>
-            <li  *ngIf="deconnexion==true" class="nav-item dropdown" >
+            <li *ngIf="deconnexion==true" class="nav-item dropdown">
+              <div id="one" data-bs-toggle="dropdown">
 
-              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <div class="circle" [ngStyle]="{'background-color':  circleColor }">
-                  <img   class="avatar" class="user" *ngIf="!showInitials" src="{{photoUrl}}">
+                  <img class="avatar" class="user" *ngIf="!showInitials" src="{{photoUrl}}">
 
                   <div *ngIf="showInitials" class="initials">
                     {{ initials }}
                   </div>
                 </div>
-              </a>
+              </div>
+
               <div class="dropdown-menu dropdown-menu-end">
-                <a routerLink="/profile" style="color:black ; font-size: 12px;"
-                   class="dropdown-item">Profile</a>
+                <a routerLink="/profile" style="color:black ; font-size: 12px;" class="dropdown-item">Profile</a>
                 <div class="dropdown-divider"></div>
-                <a  class="dropdown-item"
-                    style="color:black; font-size: 12px;">Déconnexion</a>
+                <a class="dropdown-item" style="color:black; font-size: 12px;">Déconnexion</a>
               </div>
             </li>
 
@@ -45,8 +45,26 @@
             <span>Menu</span>
           </a>
           <!-- ***** Menu End ***** -->
+
+          <!-- Modal -->
+
+          <div class="modal fade " id="exampleModal" aria-labelledby="exampleModalLabel" tabindex="-1"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <app-about></app-about>
+              </div>
+
+            </div>
+          </div>
+
+
         </nav>
       </div>
     </div>
   </div>
+
 </header>

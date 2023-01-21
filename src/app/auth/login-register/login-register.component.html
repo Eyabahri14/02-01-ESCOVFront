@@ -1,14 +1,10 @@
 
-<div class="container" style="width: 1500px;height: 800px;margin-top:10%"id="container">
+<app-nav></app-nav>
+<div class="container" style="width: 85%;height: 100%;margin-top:10%;margin-bottom:5%;"id="container">
   <div class="form-container sign-up-container">
     <form  [formGroup]="userRegister">
-      <h1>Create Account</h1>
-      <div class="social-container">
-        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <span>or use your email for registration</span>
+      <h1>Créer votre compte</h1>
+     <br>
       <input   formControlName="username"  required maxlength="20" minlength="7" type="text" placeholder="nom et prenom" name="username"  />
       <div *ngIf="userRegister.controls.username.invalid && userRegister.controls.username.touched">
         <small *ngIf="userRegister.controls.username.errors?.['required']" class="text-danger"> nom et prénom obilgatoires</small>
@@ -38,36 +34,36 @@
 
 
 
-      <button (click)="Register()">Sign Up</button>
+      <button class="btnn" (click)="Register()">Sign Up</button>
     </form>
   </div>
   <div class="form-container sign-in-container">
     <form [formGroup]="userLogin">
       <h1>Connectez vous</h1>
 
-      <span>or use your account</span>
-
+<br>
       <input   formControlName="email"   type="text" placeholder="Email" name="email"  />
       <input   formControlName="password"    type="password" placeholder="Password" name="p"   />
 
       <a routerLink="/reset">Vous aves oublié votre mot de passe?</a>
-      <button (click)="login()" >Connexion</button>
+      <button class="btnn" (click)="login()" >Connexion</button>
     </form>
   </div>
   <div class="overlay-container">
     <div class="overlay">
       <div class="overlay-panel overlay-left">
         <h1>Welcome Back!</h1>
-        <p>To keep connected with us please login with your personal info</p>
+        <br>
         <button class="ghost" id="signIn">Sign In</button>
       </div>
       <div class="overlay-panel overlay-right">
         <h1>Hello, Friend!</h1>
-        <p>Enter your personal details and start journey with us</p>
+        <br>
+
         <button class="ghost" id="signUp">Sign Up</button>
       </div>
     </div>
   </div>
 </div>
 
-
+<app-footer></app-footer>

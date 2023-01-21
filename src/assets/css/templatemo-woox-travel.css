@@ -143,9 +143,9 @@ hgroup {
 
 html,
 body {
-  scrollbar-gutter: stable both-edges;
+  /* scrollbar-gutter: stable both-edges;
 
-  overflow-y:scroll;
+  overflow-y:scroll; */
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   background-color: #fff;
