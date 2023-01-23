@@ -65,6 +65,13 @@ export class AuthService {
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
   }
+  otp(body: any) {
+
+    return this.http.post(this.baseUri+'/otp', body, {
+      observe: 'response',
+      headers: new HttpHeaders().append('Content-Type', 'application/json')
+    });
+  }
 
   changepassword(body: any) {
     return this.http.post( this.baseUri+'/change-password', body, {

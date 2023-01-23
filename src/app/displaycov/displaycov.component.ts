@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { PublicationserviceService } from '../publicationservice.service';
-import { IDropdownSettings } from 'ng-multiselect-dropdown';
-import {NgxSpinnerService} from "ngx-spinner";
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute, Router } from '@angular/router';
+import { IDropdownSettings } from 'ng-multiselect-dropdown';
+import { NgxSpinnerService } from "ngx-spinner";
 import { AboutComponent } from '../about/about.component';
+import { PublicationserviceService } from '../publicationservice.service';
 @Component({
   selector: 'app-displaycov',
   templateUrl: './displaycov.component.html',
@@ -35,6 +35,10 @@ export class DisplaycovComponent implements OnInit {
   })
   selectedItems: string[] = [];
   selectedItems2: string[] = [];
+  email : String =""; 
+  token : String =""; 
+  texterror : String =""; 
+
   // selectedItems = [{ item_id: Number, item_text: String }] as const;;
   dropdownSettings: IDropdownSettings = {
     singleSelection: true,
@@ -366,6 +370,16 @@ export class DisplaycovComponent implements OnInit {
     this.loaddata();
   }
   open() {
+    this.email = localStorage.getItem('email')!;
+    this.token = localStorage.getItem('token')!;
+
+    if(this.email!=""&&this.token!=""){
     let dialogRef = this.dialog.open(AboutComponent);
+
+    }
+    else{
+     this.texterror="Veuillez vous connecter afin de publier votre newsletter";
+
+    }
   }
 }

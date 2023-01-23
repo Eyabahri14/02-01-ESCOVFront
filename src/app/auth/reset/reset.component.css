@@ -163,7 +163,7 @@ input {
 .overlay {
   background: #7fc6a6;
   background: -webkit-linear-gradient(to right, #ffffff, #7fc6a6);
-  background: linear-gradient(to right, #4f90c7, #7fc6a6);
+  background:   #7fc6a6;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -251,3 +251,72 @@ footer a {
   color: #3c97bf;
   text-decoration: none;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+p span.phone-number {
+  display: block;
+  color: #093030;
+  font-weight: 600;
+}
+
+.wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: space-between;
+}
+
+.wrapper input.field {
+  width: 50px;
+  line-height: 45px;
+  font-size: 32px;
+  border: none;
+  background-color: #EAF5F6;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #093030;
+  margin-bottom: 25px;
+}
+
+.wrapper input.field:focus {
+  outline: none;
+}
+
+button.resend {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  color: #3DAFE1;
+  cursor: pointer;
+}
+
+button.resend i {
+  margin-left: 5px;
+}
+.btnn{
+  font-size: 14px;
+      color: #fff;
+      background-color: #7fc6a6;
+      border: 1px solid #7fc6a6;
+      padding: 12px 30px;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+      border-radius: 25px;
+      font-weight: 500;
+      text-transform: capitalize;
+      letter-spacing: 0.5px;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+}
+ 

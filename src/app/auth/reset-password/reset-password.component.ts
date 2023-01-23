@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
-import {AuthService} from "../../auth.service";
+import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 import Swal from "sweetalert2";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import { AuthService } from "../../auth.service";
 
 @Component({
   selector: 'app-reset-password',
@@ -23,6 +23,8 @@ export class ResetPasswordComponent implements OnInit {
   Reset(){
     this.authService.reset(this.resetForm.value).subscribe((res: any) => {
       console.log(this.resetForm.value)
+      localStorage.setItem('email', this.resetForm.value.email!);
+
       if(res) {
         Swal.fire(
           'Félicitations!',

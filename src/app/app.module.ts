@@ -1,35 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AutocompleteLibModule } from 'angular-ng-autocomplete';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { AboutComponent } from './about/about.component';
+import { AddcovComponent } from './addcov/addcov.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DisplaycovComponent } from './displaycov/displaycov.component';
+import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
-import { DisplaycovComponent } from './displaycov/displaycov.component';
-import { AddcovComponent } from './addcov/addcov.component';
-import { AboutComponent } from './about/about.component';
-import { AutocompleteLibModule } from 'angular-ng-autocomplete';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { FooterComponent } from './footer/footer.component';
 
-import { OAuthModule } from "angular-oauth2-oidc";
-import { ProfileComponent } from './profile/profile.component';
-import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
-import { GoogleMapsModule } from "@angular/google-maps";
 import { CommonModule } from "@angular/common";
-import { JwPaginationComponent } from 'jw-angular-pagination';
-import { LoginRegisterComponent } from './auth/login-register/login-register.component';
-import { ResetComponent } from './auth/reset/reset.component';
-import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
-import { ProfileAuthComponent } from './auth/profile-auth/profile-auth.component';
-import { NgxSpinnerModule } from "ngx-spinner";
-import { EditCovComponent } from './edit-cov/edit-cov.component';
+import { GoogleMapsModule } from "@angular/google-maps";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { OAuthModule } from "angular-oauth2-oidc";
+import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
+import { NgxSpinnerModule } from "ngx-spinner";
+import { LoginRegisterComponent } from './auth/login-register/login-register.component';
+import { ProfileAuthComponent } from './auth/profile-auth/profile-auth.component';
+import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
+import { ResetComponent } from './auth/reset/reset.component';
+import { EditCovComponent } from './edit-cov/edit-cov.component';
+import { ProfileComponent } from './profile/profile.component';
 
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
